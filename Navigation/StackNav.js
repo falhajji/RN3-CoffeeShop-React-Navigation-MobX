@@ -17,11 +17,14 @@ const StackNav = createStackNavigator(
     defaultNavigationOptions: {
       headerTintColor: "white",
       headerStyle: {
-        backgroundColor: "rgb(20,90,200)"
+        backgroundColor: "rgb(20,90,100)"
       },
-      headerTextStyle: {
+      headerTitleStyle: {
         fontWeight: "bold"
       }
+    },
+    cardStyle: {
+      backgroundColor: "rgb(20,90,100)"
     }
   }
 );

@@ -9,6 +9,7 @@ import coffeeStore from "../../store/coffeeStore";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
+import CartButton from "../Button/CartButton";
 
 const CoffeeList = () => {
   const { cafes } = coffeeStore;
@@ -24,7 +25,9 @@ const CoffeeList = () => {
 };
 
 CoffeeList.navigationOptions = {
-  title: "Coffee List"
+  title: "Coffee List",
+  headerRight: <CartButton />,
+  headerLeft: null
 };
 
 export default observer(CoffeeList);

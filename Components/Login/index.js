@@ -59,7 +59,13 @@ const Login = ({ navigation }) => {
         >
           <Text>Login</Text>
         </Button>
-        <Button full warning>
+        <Button
+          full
+          warning
+          onPress={() => {
+            navigation.navigate("CoffeeList");
+          }}
+        >
           <Text>Register</Text>
         </Button>
       </List>

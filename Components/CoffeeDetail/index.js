@@ -21,6 +21,9 @@ import styles from "./styles";
 // Store
 import coffeeStore from "../../store/coffeeStore";
 
+//Button
+import CartButton from "../Button/CartButton";
+
 class CoffeeDetail extends Component {
   state = {
     drink: "Cappuccino",
@@ -98,5 +101,11 @@ class CoffeeDetail extends Component {
     );
   }
 }
+
+CoffeeDetail.navigationOptions = ({ navigation }) => ({
+  title: navigation.getParam("cafeName"),
+  headerRight: <CartButton />,
+  headerLeft: null
+});
 
 export default observer(CoffeeDetail);
