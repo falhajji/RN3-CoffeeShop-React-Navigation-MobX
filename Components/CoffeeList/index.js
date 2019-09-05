@@ -23,4 +23,8 @@ const CoffeeList = () => {
   );
 };
 
+CoffeeList.navigationOptions = {
+  title: "Coffee List"
+};
+
 export default observer(CoffeeList);

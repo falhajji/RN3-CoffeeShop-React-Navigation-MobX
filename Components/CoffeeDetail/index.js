@@ -40,9 +40,13 @@ class CoffeeDetail extends Component {
   };
 
   render() {
+    const { navigation } = this.props;
+    //const navigation = this.props.navigation
     const { cafes } = coffeeStore;
+    // const cafes = coffeeStore.cafes;
     if (!cafes) return <Content />;
-    const cafe = cafes[0];
+    const cafeID = navigation.getParam("cafeID");
+    const cafe = cafes.find(cafe => cafe.id === cafeID);
     return (
       <Content>
         <List>

@@ -14,8 +14,9 @@ import {
   Content,
   Header
 } from "native-base";
+import CoffeeList from "../CoffeeList";
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return (
     <Content>
       <Header transparent />
@@ -49,7 +50,13 @@ const Login = () => {
             </Form>
           </Body>
         </ListItem>
-        <Button full success>
+        <Button
+          full
+          success
+          onPress={() => {
+            navigation.navigate("CoffeeList");
+          }}
+        >
           <Text>Login</Text>
         </Button>
         <Button full warning>
